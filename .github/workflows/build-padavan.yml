@@ -111,8 +111,8 @@ jobs:
         #sed -i '/自定义项/d' .config
         #echo "自定义项=y" >> .config
         
-        # sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config #删除配置选项VLMCSD微软激活服务
-        # echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config #VLMCSD微软激活服务
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config #删除配置选项VLMCSD微软激活服务
+        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=y" >> .config #VLMCSD微软激活服务
         
         # sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config #删除配置选项TTYD web命令行
         # echo "CONFIG_FIRMWARE_INCLUDE_TTYD=n" >> .config #TTYD web命令行

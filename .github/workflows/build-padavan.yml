@@ -102,7 +102,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config #可以不集成
         #echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_MICROSOCKS=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_WYY=n" >> .config #网易云解锁
+        echo "CONFIG_FIRMWARE_INCLUDE_WYY=y" >> .config #网易云解锁
         echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=n" >> .config #网易云解锁GO版本执行文件（4M多）注意固件超大小,不集成会自动下载
 
         #########################################################################################
@@ -111,11 +111,11 @@ jobs:
         #sed -i '/自定义项/d' .config
         #echo "自定义项=y" >> .config
         
-        #sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config #删除配置选项VLMCSD微软激活服务
-        #echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config #VLMCSD微软激活服务
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config #删除配置选项VLMCSD微软激活服务
+        # echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config #VLMCSD微软激活服务
         
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config #删除配置选项TTYD web命令行
-        echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> .config #TTYD web命令行
+        # sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config #删除配置选项TTYD web命令行
+        # echo "CONFIG_FIRMWARE_INCLUDE_TTYD=n" >> .config #TTYD web命令行
         
         #########################################################################################
         sudo ./clear_tree
